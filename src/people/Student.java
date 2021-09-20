@@ -51,6 +51,10 @@ public class Student {
         this.classGroup = classGroup;
     }
 
+    public void setAverageGrade(double averageGrade) {
+        this.averageGrade = averageGrade;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -77,9 +81,5 @@ public class Student {
 
     public double getAverageGrade() {
         return averageGrade;
-    }
-
-    public void setAverageGrade(double averageGrade) {
-        this.averageGrade = averageGrade;
     }
 }

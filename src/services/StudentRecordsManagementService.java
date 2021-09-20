@@ -4,6 +4,11 @@ import people.Student;
 
 public interface StudentRecordsManagementService {
 
-    void addStudentToClass(Student student, int currentClass);
-    void letStudentGoToUpperClass(Student student);
+    void addStudentToClass();
+
+    void addStudentToSchool();
+
+    void letStudentGoToUpperClass();
+
+    void showStudentMenu();
 }

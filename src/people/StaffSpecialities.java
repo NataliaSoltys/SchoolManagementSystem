@@ -7,9 +7,9 @@ public enum StaffSpecialities {
     SECRETARY(4),
     NURSE(5);
 
-    private int importance;
+    private int responsibility;
 
     StaffSpecialities(int importance) {
-        this.importance = importance;
+        this.responsibility = importance;
     }
 }

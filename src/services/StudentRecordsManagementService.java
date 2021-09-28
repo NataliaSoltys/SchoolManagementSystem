@@ -1,7 +1,5 @@
 package services;
 
-import people.Student;
-
 public interface StudentRecordsManagementService {
 
     void addStudentToClass();
@@ -10,5 +8,5 @@ public interface StudentRecordsManagementService {
 
     void letStudentGoToUpperClass();
 
-    void showStudentMenu();
+    int showStudentMenu();
 }

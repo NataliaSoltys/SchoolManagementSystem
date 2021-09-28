@@ -7,10 +7,10 @@ public class Menu {
     static StudentRecordsManagementService studentRecordsManagementService = new StudentRecordsManagementServiceImpl();
     static StaffRecordsManagementService staffRecordsManagementService = new StaffRecordsManagementServiceImpl();
 
-    public static int showWelcome() {
+    public static int overallDecision() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to Roosevelt High School. It's a pleasure to have you here.");
-        System.out.print("Press 1 if you're interested in managing students or 2 if you want to check staff, or 3 - teachers: ");
+        System.out.print("Press 1 if you're interested in managing students or 2 if you want to check staff, " +
+                "3 - teachers, 4 - if you want to exit: ");
         int decide = scanner.nextInt();
         System.out.println();
         return decide;
@@ -18,7 +18,10 @@ public class Menu {
 
     public static void studentManaging() {
         System.out.println("Welcome to Student Managing System. ");
-        studentRecordsManagementService.showStudentMenu();
+        while (studentRecordsManagementService.showStudentMenu() != 6){
+
+        }
+
 
     }
 
@@ -40,6 +43,9 @@ public class Menu {
                 break;
             case 3:
                 Menu.teacherManaging();
+                break;
+            case 4:
+                System.out.println("Goodbye");
                 break;
             default:
                 System.out.println("You entered wrong number. Try again.");

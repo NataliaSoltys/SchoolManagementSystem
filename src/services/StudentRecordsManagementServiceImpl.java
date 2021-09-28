@@ -16,7 +16,7 @@ public class StudentRecordsManagementServiceImpl implements StudentRecordsManage
 //        school.put(1, Collections.singletonList("Wiki Miki"));
 //        System.out.println(school);
 
-    public void showStudentMenu() {
+    public int showStudentMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type a number according to your needs.");
         System.out.println("1 - Show all students in school.");
@@ -24,29 +24,33 @@ public class StudentRecordsManagementServiceImpl implements StudentRecordsManage
         System.out.println("3 - Add student to class.");
         System.out.println("4 - Add student to school.");
         System.out.println("5 - Proceed student to the next class.");
+        System.out.println("6 - Exit Student Managing System.");
         System.out.println("Your answer:  ");
         int number = scanner.nextInt();
 
         switch (number) {
             case 1:
                 showStudentArray();
-                break;
+                 break;
             case 2:
                 showStudentClasses();
-                break;
+                 break;
             case 3:
                 addStudentToClass();
-                break;
+                 break;
             case 4:
                 addStudentToSchool();
-                break;
+                 break;
             case 5:
                 letStudentGoToUpperClass();
-                break;
+                 break;
+            case 6:
+                 break;
             default:
                 System.out.println("Answer is wrong.");
                 showStudentMenu();
         }
+        return number;
     }
 
     public void showStudentArray() {
@@ -74,8 +78,9 @@ public class StudentRecordsManagementServiceImpl implements StudentRecordsManage
 
         for (int i = 0; i < classes.size(); i++) {
             for (List<Student> student : classes.values()) {
-                System.out.println(student);
+                System.out.print(student);
             }
+            System.out.println();
         }
 
     }
